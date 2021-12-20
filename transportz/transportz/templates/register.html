@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register to our website!</title>
+        </head>
+        <body>{%if error%}
+            <p>{{error}}</p>
+            {%endif%}
+            <p>Register</p>
+            <form  action="/register" method="get">
+                <p>Firstname: <input type="text" name="firstname" required></input></p>
+                <p>Lastname: <input type="text" name="lastname" required></input></p>
+                <p>Email: <input type="email" name="email"required></input></p>
+                <p>Pseudo: <input type="pseudo" name="pseudo"></input></p>
+                <p>Phrasepass: <input type="text" name="phrasepass"></input></p>
+                <p>Confirm Phrasepass: <input type="text" name="confirm phrasepass"></input></p>
+                <p><input type="radio" name="gender" value="M">Male</input></p>
+                <p><input type="radio" name="gender" value="F">Female</input></p>
+                <p><input type="radio" name="gender" value="X">X</input></p>
+                <p><input type="submit" value="Register!"></input></p>
+                <p>do you want to be admin? If yes type the code<input type="text" name="password"></input></p>
+            </form>
+        </body>
+        </html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!DOCTYPEhtml>
+<html>
+  <head>
+    <title> You can add bus, tram, metro lines and halts here. </title>
+  </head>
+  <body>
+      <p>Please add lines and halts below </p>
+      <form action="/line" method="post">
+        {% csrf_token %}
+        <p>Line : <input id="line" type="text" name ="line"></input></p>
+        <p><input type="submit" value="submit!"></input></p>
+      </form>
+  </body>
+</html>

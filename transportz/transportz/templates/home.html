@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Welcome user{{pseu}} </title>
+  </head>
+    <body>
+    <h1> Welcome to our page</h1>
+    <h2> Report a control here below </h2>
+    <p>If you want to signal a control, you can do it <a href="https://team28.sbslab.be/signal"> here. </a></p>
+    <h2> Check the different police controls </h2>
+    <p> If you want to look up all the locations where they are controlling, type <a href="https://team28.sbslab.be/control"> here. </a> </p>
+    <h2>See all our stats </h2>
+    <p> If you want to see all our stats, click <a href="https://team28.sbslab.be/stat"> here. </a></p>
+    <h2>Check the controls on your route </h2>
+    <p>You can calculate your route <a href="https://team28.sbslab.be/calcul"> here. </a></p>
+    <p> {%if statut%}</p>
+    <h2> Import new stops or lines (only for admins)  </h2>
+    <p>Encode new stops or lines <a href="https://team28.sbslab.be/line"> here. </a></p>
+   {%endif%}
+  </body>
+</html>

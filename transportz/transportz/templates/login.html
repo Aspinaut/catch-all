@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Welcome to Transportz </title>
+  </head>
+  <body>
+    <p>Please login</p>
+    {%if yo%}
+    <p>{{yo}}</p>
+    {%endif%}
+    {%if error%}
+    <p>{{error}}</p>
+    {%endif%}
+    <form action="/login"  method="get">
+      <p>pseudo:</p>
+      <p><input type="text" name="pseudo" required></input></p>
+      <p>phrasepass:</p>
+      <p><input type="text" name="phrasepass" required></input></p>
+      <p><input type="submit" value="Login!"></input></p>
+
+      <p> If you are not yet registered, you can do it <a href="https://team28.sbslab.be/register"> here. </a> </p>
+
+
+    </form>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPEhtml>
+<html>
+  <head>
+    <title> You can add halts here. </title>
+  </head>
+  <body>
+      <p>Please add halts below </p>
+      <form action="/arret" method="post">
+        {% csrf_token %}
+        <input id="arret" name="arret" type="text" list="arretlist" />
+        <datalist id="arretlist">
+          <option>Stockel</option>
+          <option>Arts-lois</option>
+          <option>Louise</option>
+          <option>Trone</option>
+        </datalist>
+        <p><input type="submit" value="submit!"></input></p>
+      </form>
+  </body>
+</html>
