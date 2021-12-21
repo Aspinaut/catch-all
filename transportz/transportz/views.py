@@ -70,23 +70,30 @@ def signal_view(request) :
         return redirect("/")
 
 
-def line_view(request) :
-    if 'line' in request.POST:
-        NewInfo= Line(name=request.POST['line'])
-        NewInfo.save()
-        return redirect('/arret', line=request.POST['line'])
-    if 'line' in request.GET:
-
-    	return render(request, 'line.html')
+# def line_view(request) :
+# 	print(request)
+#     if 'line' in request.POST:
+# 		NewInfo= Line(name=request.POST['line'])
+# 		NewInfo.save()
+# 		return redirect('/arret', line=request.POST['line'])
+# 	return render(request, 'line.html')
+#     # if 'line' in request.GET:
 
 def arret_view(request):
-    print(request)
-    if 'arret' in request.POST:
-        Newarret=Arret(arret=request.POST['arret'])
-        Newarret.save()
-        #return redirect('/')
-    return render(request, 'arret.html')
+	print(request)
+	return render(request, 'arret.html')
+    # if 'arret' in request.POST:
+    #     Newarret=Arret(arret=request.POST['arret'])
+    #     Newarret.save()
+    # return render(request, 'arret.html')
 
+
+def line_view(request):
+	if 'line' in request.POST:
+		NewInfo = Line(name=request.POST['line'])
+		NewInfo.save()
+		return redirect(arret_view)
+	return render(request, 'line.html')
 
 
 def control_view(request) :

@@ -14,15 +14,15 @@ class User(models.Model):
         return self.firstname+' '+ self.lastname
 
 class Line(models.Model):
-    name= models.CharField(max_length=30)
-    def __str__(self):
-        return self.name
-
+	name= models.CharField(max_length=30)
+	def __str__(self):
+		return self.name
 
 class Arret(models.Model):
-    arret = models.CharField(max_length=30)
-    def __str__(self):
-        return self.arret
+	arret = models.CharField(max_length=30)
+	lines = models.ManyToManyField(Line)
+	def __str__(self):
+		return self.arret
 
 class Junction(models.Model):
     line = models.ForeignKey(Line, on_delete=models.CASCADE)
